@@ -1,0 +1,298 @@
+:root {
+  --bg-main: #0a0b0f;
+  --bg-card: rgba(19, 21, 26, 0.75);
+
+  --text-primary: #f0f1f5;
+  --text-secondary: #8a8f9e;
+
+  --accent: #8b5cf6;
+  --accent-hover: #9f67ff;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --radius-card: 28px;
+  --radius-button: 16px;
+
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1.25rem;
+}
+
+.portal-card {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 2.5rem;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: var(--shadow-card);
+
+  text-align: center;
+}
+
+.portal-logo {
+  display: block;
+  margin: 0 auto 0.50rem;
+}
+
+.portal-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 0.50rem;
+}
+
+.portal-description {
+  color: var(--text-secondary);
+
+  line-height: 1;
+
+  margin-bottom: 2rem;
+}
+
+.portal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portal-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1rem 1.5rem;
+
+  border-radius: var(--radius-button);
+  border: 1px solid var(--border);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.portal-button-content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.portal-button-arrow {
+  opacity: 0.6;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.portal-button:hover .portal-button-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.portal-button:hover {
+  transform: translateY(-2px);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.portal-button-primary {
+  background: var(--accent);
+
+  border-color: transparent;
+}
+
+.portal-button-primary:hover {
+  background: var(--accent-hover);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .portal-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .portal-title {
+    font-size: 1.75rem;
+  }
+}
+
+.portal-footer {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  text-align: center;
+}
+
+.portal-footer-text {
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+}
+
+.portal-footer-copy {
+  color: var(--text-secondary);
+
+  font-size: 0.8rem;
+
+  opacity: 0.75;
+}
+
+.document-page {
+  min-height: 100vh;
+  padding: 2rem 1.25rem;
+}
+
+.document-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.document-header {
+  margin-bottom: 2rem;
+}
+
+.document-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: opacity 0.2s ease;
+}
+
+.document-back:hover {
+  opacity: 0.8;
+}
+
+.document-content {
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.document-content h1 {
+  color: var(--text-primary);
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+.document-content h2 {
+  color: var(--text-primary);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.document-content h3 {
+  color: var(--text-primary);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.document-content p {
+  margin-bottom: 1rem;
+}
+
+.document-page .portal-footer {
+  margin-top: 4rem;
+}
+
+.document-content ol {
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 1.5rem;
+
+  color: var(--text-secondary);
+  line-height: 1.9;
+
+  list-style-position: inside;
+}
+
+.document-content li {
+  margin-bottom: 0.75rem;
+}

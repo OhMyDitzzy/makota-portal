@@ -3,21 +3,23 @@ import Link from "next/link";
 import {
   Globe,
   Coffee,
-  FileSearchCorner,
+  FileSearch,
   FileText,
   ChevronRight,
   ExternalLink,
 } from "lucide-react";
 
 export const metadata = {
-  title: "Makota",
-  description: "Portal resmi Makota.",
+  title: "Makota - Baca Manga, Manhwa, Manhua Online",
+  description: "Portal resmi Makota untuk akses baca komik manga, manhwa, dan manhua terlengkap dan terupdate.",
 };
 
 export default function Home() {
   return (
     <main>
       <section className="portal-card">
+        <h1 className="sr-only">Makota - Portal Baca Manga, Manhwa, dan Manhua</h1>
+
         <Image
           src="/makota.svg"
           alt="Makota Logo"
@@ -28,6 +30,11 @@ export default function Home() {
         />
 
         <p className="portal-description">Manga - Manhwa - Manhua</p>
+
+        <p className="sr-only">
+          Makota adalah portal resmi untuk membaca komik manga, manhwa, dan
+          manhua secara online, gratis, dan terupdate setiap hari.
+        </p>
 
         <div className="portal-buttons">
           <a
@@ -42,11 +49,10 @@ export default function Home() {
             </div>
             <ExternalLink size={18} />
           </a>
-
           <a
             href="https://saweria"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="portal-button"
           >
             <div className="portal-button-content">
@@ -55,15 +61,13 @@ export default function Home() {
             </div>
             <ExternalLink size={18} />
           </a>
-
           <Link href="/service" className="portal-button">
             <div className="portal-button-content">
-              <FileSearchCorner size={20} />
+              <FileSearch size={20} />
               <span>Terms of Service</span>
             </div>
             <ChevronRight size={18} />
           </Link>
-
           <Link href="/policy" className="portal-button">
             <div className="portal-button-content">
               <FileText size={20} />

@@ -50,7 +50,7 @@ export default function Home() {
             <ExternalLink size={18} />
           </a>
           <a
-            href="https://saweria"
+            href="https://sociabuzz.com/makota/tribe"
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="portal-button"
